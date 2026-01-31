@@ -1,0 +1,36 @@
+---
+import { AstroFont } from "astro-font"
+import Home from "../components/pages/home.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Tristan - Portfolio</title>
+		<AstroFont
+			config={[
+				{
+					name: "Syne",
+					src: [
+						{
+							style: "normal",
+							weight: "400 700",
+							path: "./public/fonts/Syne-VariableFont_wght.woff2",
+						},
+					],
+					preload: false,
+					display: "swap",
+					selector: "body",
+					fallback: "sans-serif",
+				},
+			]}
+		/>
+	</head>
+	<body>
+		<Home />
+	</body>
+</html>

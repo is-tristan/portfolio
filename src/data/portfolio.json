@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Prompt Pay Capital",
+        "feautedImage": "/images/portfolio/prompt-pay-capital.svg",
+        "stack": [
+            "Next.js",
+            "Typescript",
+            "Headless"
+        ],
+        "link": "https://promptpaycapital.com",
+        "repo": "https://github.com/is-tristan/prompt-pay"
+    },
+    {
+        "title": "Tagged",
+        "feautedImage": "/images/portfolio/tagged.svg",
+        "stack": [
+            "Next.js",
+            "Typescript",
+            "Supabase"
+        ],
+        "link": "https://found.tagged-pets.com/",
+        "repo": null
+    },
+    {
+        "title": "Growth3",
+        "feautedImage": "/images/portfolio/growth3.svg",
+        "stack": [
+            "Next.js",
+            "Headless"
+        ],
+        "link": "https://github.com/is-tristan/growth3",
+        "repo": null
+    },
+    {
+        "title": "Syncvue UK",
+        "feautedImage": "/images/portfolio/syncvue-uk.svg",
+        "stack": [
+            "Astro"
+        ],
+        "link": "https://www.quicksvg.xyz",
+        "repo": "https://github.com/is-tristan/QuickSVG"
+    },
+    {
+        "title": "Quick SVG",
+        "feautedImage": "/images/portfolio/quick-svg.svg",
+        "stack": [
+            "Astro"
+        ],
+        "link": "https://www.quicksvg.xyz",
+        "repo": "https://github.com/is-tristan/QuickSVG"
+    },
+    {
+        "title": "WCS",
+        "feautedImage": "/images/portfolio/wcs.svg",
+        "stack": [
+            "Vite",
+            "WordPress"
+        ],
+        "link": "https://wcs.agency",
+        "repo": null
+    },
+    {
+        "title": "Calstro Hospice",
+        "feautedImage": "/images/portfolio/calstro-hospice.svg",
+        "stack": [
+            "Vite",
+            "WordPress"
+        ],
+        "link": "https://wordpress-1520445-6130122.cloudwaysapps.com",
+        "repo": null
+    },
+    {
+        "title": "BMB",
+        "feautedImage": "/images/portfolio/bmb.svg",
+        "stack": [
+            "Vite",
+            "WordPress"
+        ],
+        "link": "https://wordpress-1302461-5936880.cloudwaysapps.com/",
+        "repo": null
+    }
+]

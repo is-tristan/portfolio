@@ -1,0 +1,48 @@
+:root {
+    font-size: 1rem;
+
+    // Colours
+    --primary: #6786fe;
+    --primaryRgb: 103, 134, 254;
+    --dark: #0d0f14;
+    --darkRgb: 13, 15, 20;
+    --darkAlt: #202022;
+    --darkAltRgb: 32, 32, 34;
+    --light: #f1f5ff;
+    --lightRgb: 241, 245, 255;
+    --textGrey: #a1a1aa;
+    --textGreyRgb: 161, 161, 170;
+
+    // Brand Colors
+    --wordPressColor: #4666f4;
+    --wordpressRgb: 70, 102, 244;
+    --typescriptColor: #3178c6;
+    --typescriptRgb: 49, 120, 198;
+    --supabaseColor: #3dc88a;
+    --supabaseRgb: 61, 200, 138;
+    --astroColor: #df3770;
+    --astroRgb: 223, 55, 112;
+    --viteColor: #f7c422;
+    --viteRgb: 247, 196, 34;
+    --headlessColor: #5c72f0;
+    --headlessRgb: 92, 114, 240;
+
+    // Fonts
+    --heading: "Syne", ui-sans-serif, sans-serif;
+    --text: "Syne", ui-sans-serif, sans-serif;
+
+    // Borders & Radius
+    --btnRadius: 0.5rem;
+    --borderRadius: 1rem;
+
+    // Animations
+    --ease: all 0.25s ease;
+
+    // Header
+    --headerHeight: 7rem;
+    --mobileHeaderHeight: 5rem;
+    --adminBarHeight: 2rem;
+
+    // Layout
+    --layoutMaxWidth: 90%;
+}

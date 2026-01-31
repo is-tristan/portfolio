@@ -1,0 +1,56 @@
+@use "../../init/mixins" as *;
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formItems {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    width: 100%;
+
+    @media (width >=768px) {
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+
+    .formItem {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+
+        &.itemHalf {
+            @media (width >=768px) {
+                flex-basis: calc(50% - 0.5rem);
+            }
+        }
+    }
+
+    .formInput {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid rgba(var(--darkRgb), 0.15);
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        line-height: 125%;
+        font-family: var(--text);
+        color: var(--dark);
+        background: var(--lightAlt);
+        transition: var(--ease);
+
+        &::placeholder {
+            color: var(--dark);
+            opacity: 0.75;
+        }
+
+        &:focus,
+        &:active {
+            border-color: var(--primary);
+        }
+    }
+}

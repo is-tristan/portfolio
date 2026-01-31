@@ -1,0 +1,114 @@
+.portfolio {
+    h2 {
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.categoriesNav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.portfolioItems {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+
+    >article {
+        flex: 0 0 100%;
+    }
+
+    @media (width >=768px) {
+        >article {
+            flex: 0 0 calc(50% - 1.5rem);
+        }
+    }
+
+    @media (width >=1200px) {
+        >article {
+            flex: 0 0 calc(33.33% - 1.5rem);
+        }
+    }
+}
+
+.portfolioItem {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(var(--lightRgb), 0.075);
+    border-radius: 0.25rem;
+    transition: var(--ease);
+
+    .itemImage {
+        aspect-ratio: 16/9;
+        border-radius: var(--borderRadius);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .itemContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stack {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem;
+
+        .stackItem {
+            padding: 0.33rem 0.66rem;
+            background: rgba(var(--lightRgb), 0.025);
+            border: 1px solid rgba(var(--lightRgb), 0.2);
+            color: var(--textGrey);
+            border-radius: var(--borderRadius);
+
+            &[data-category="typescript"] {
+                background: rgba(var(--typescriptRgb), 0.1);
+                border-color: rgba(var(--typescriptRgb), 0.2);
+                color: var(--typescriptColor);
+            }
+
+            &[data-category="supabase"] {
+                background: rgba(var(--supabaseRgb), 0.1);
+                border-color: rgba(var(--supabaseRgb), 0.2);
+                color: var(--supabaseColor);
+            }
+
+            &[data-category="astro"] {
+                background: rgba(var(--astroRgb), 0.1);
+                border-color: rgba(var(--astroRgb), 0.2);
+                color: var(--astroColor);
+            }
+
+            &[data-category="vite"] {
+                background: rgba(var(--viteRgb), 0.1);
+                border-color: rgba(var(--viteRgb), 0.2);
+                color: var(--viteColor);
+            }
+
+            &[data-category="headless"] {
+                background: rgba(var(--headlessRgb), 0.1);
+                border-color: rgba(var(--headlessRgb), 0.2);
+                color: var(--headlessColor);
+            }
+
+            &[data-category="wordpress"] {
+                background: rgba(var(--wordpressRgb), 0.1);
+                border-color: rgba(var(--wordpressRgb), 0.2);
+                color: var(--wordPressColor);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+const { id, layoutType = "default", title, description, imageUrl } = Astro.props
+const layoutTypes = {
+	default: "dualCols rowReverse",
+	rightImage: "dualCols",
+	centered: "centered",
+} as const
+---
+
+<section id={id ? id : null} class={`row section`}>
+	<div class={`container ${layoutTypes[layoutType as keyof typeof layoutTypes]}`}>
+		{
+			imageUrl && (
+				<div class="col imageCol">
+					<div class="imageFill">
+						<Image src={imageUrl} alt={title} width={576} height={576} layout="full-width" />
+					</div>
+				</div>
+			)
+		}
+		<div class="col contentCol">
+			<div class="heading">
+				<h2>{title}</h2>
+				{description && <div class="description" set:html={description} />}
+			</div>
+		</div>
+	</div>
+</section>

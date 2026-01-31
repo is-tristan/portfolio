@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Portfolio",
+        "href": "/#portfolio"
+    },
+    {
+        "label": "About",
+        "href": "/#about"
+    },
+    {
+        "label": "Contact",
+        "href": "mailto:me@tristanwills.com"
+    }
+]

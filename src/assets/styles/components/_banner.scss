@@ -1,0 +1,51 @@
+.banner {
+    position: relative;
+    padding-top: var(--mobileHeaderHeight);
+    min-height: calc(100vh - var(--mobileHeaderHeight));
+    overflow: hidden;
+
+    @media (width >=1200px) {
+        padding-top: var(--headerHeight);
+        min-height: calc(100vh - var(--headerHeight));
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .heading {
+        h1 {
+            @media all {
+                max-width: 100%;
+            }
+
+            small {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+                line-height: 100%;
+                padding-top: 2rem;
+                color: var(--textGrey);
+            }
+        }
+    }
+}
+
+.orbitalPulse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (width >=1200px) {
+        margin-top: calc(var(--headerHeight) * -0.5);
+    }
+}

@@ -1,0 +1,90 @@
+<div class="orbitalPulse"></div>
+
+<script>
+	const setupOrbitalPulse = () => {
+		const container = document.querySelector(".orbitalPulse")
+		if (!container) return
+		container.innerHTML = ""
+		const canvas = document.createElement("canvas")
+		canvas.width = window.innerWidth
+		canvas.height = window.innerHeight
+		canvas.style.position = "absolute"
+		canvas.style.left = "0"
+		canvas.style.top = "0"
+		container.appendChild(canvas)
+		const ctx = canvas.getContext("2d")
+		const centerX = canvas.width / 2
+		const centerY = canvas.height / 2
+		// Scale to fill viewport (95% of smaller dimension from center)
+		const maxRadius = (Math.min(canvas.width, canvas.height) / 2) * 0.95
+		const scale = maxRadius / 75
+		let time = 0
+		let lastTime = 0
+		// Orbital rings scaled to viewport
+		const orbits = [
+			{ radius: 15 * scale, dotCount: 6 },
+			{ radius: 25 * scale, dotCount: 10 },
+			{ radius: 35 * scale, dotCount: 14 },
+			{ radius: 45 * scale, dotCount: 18 },
+			{ radius: 55 * scale, dotCount: 22 },
+			{ radius: 65 * scale, dotCount: 26 },
+		]
+		// Pulse parameters (scale with viewport)
+		const pulseFrequency = 0.5
+		const pulseAmplitude = 4 * scale
+		const sizeScale = Math.min(2, Math.max(1, scale / 50))
+		function animate(timestamp) {
+			if (!lastTime) lastTime = timestamp
+			const deltaTime = timestamp - lastTime
+			lastTime = timestamp
+			time += deltaTime * 0.001
+			ctx.clearRect(0, 0, canvas.width, canvas.height)
+			// Draw center
+			const centerDotSize = 3 * sizeScale
+			ctx.beginPath()
+			ctx.arc(centerX, centerY, centerDotSize, 0, Math.PI * 2)
+			ctx.fillStyle = "rgba(98, 132, 254, 0.9)"
+			ctx.fill()
+			// Draw orbit circles (very faint)
+			orbits.forEach((orbit, orbitIndex) => {
+				ctx.beginPath()
+				ctx.arc(centerX, centerY, orbit.radius, 0, Math.PI * 2)
+				ctx.strokeStyle = "rgba(98, 132, 254, 0.05)"
+				ctx.lineWidth = Math.max(1, sizeScale)
+				ctx.stroke()
+				// Calculate smooth pulse animation
+				// Use a sine wave that creates a continuous pulse from center to edge
+				const normalizedRadius = orbit.radius / maxRadius // 0 to 1 value
+				const pulseDelay = normalizedRadius * 1.5 // Outer rings pulse later
+				// Create a smooth, continuous pulse wave moving outward
+				// Time is multiplied by pulseFrequency to control speed
+				const pulsePhase = (time * pulseFrequency - pulseDelay) % 1
+				// Create a smooth bell curve for the pulse effect
+				// This makes it grow smoothly then shrink smoothly
+				const pulseEffect = Math.sin(pulsePhase * Math.PI) * pulseAmplitude
+				// Only apply positive pulse effects (moving outward)
+				const finalPulseEffect = pulseEffect > 0 ? pulseEffect : 0
+				// Draw dots around the orbit
+				for (let i = 0; i < orbit.dotCount; i++) {
+					const angle = (i / orbit.dotCount) * Math.PI * 2
+					// Apply pulse to radius - smooth movement outward
+					const pulsedRadius = orbit.radius + finalPulseEffect
+					const x = centerX + Math.cos(angle) * pulsedRadius
+					const y = centerY + Math.sin(angle) * pulsedRadius
+					// Dot size scales with viewport and pulse
+					const dotSize = (1 + (finalPulseEffect / pulseAmplitude) * 1.5) * sizeScale
+					// Opacity also increases with pulse
+					const opacity = 0.7 + (finalPulseEffect / pulseAmplitude) * 0.3
+					ctx.beginPath()
+					ctx.arc(x, y, dotSize, 0, Math.PI * 2)
+					ctx.fillStyle = `rgba(98, 132, 254, ${opacity})`
+					ctx.fill()
+				}
+			})
+			requestAnimationFrame(animate)
+		}
+		requestAnimationFrame(animate)
+	}
+
+	setupOrbitalPulse()
+</script>

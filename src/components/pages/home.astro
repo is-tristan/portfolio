@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/layout.astro"
+import Banner from "../../components/banner.astro"
+import PortfolioGrid from "../../components/portfolio-grid.astro"
+import Section from "../../components/section.astro"
+---
+
+<Layout>
+	<Banner title="Fullstack Developer <small>From Cape Town, South Africa</small>" />
+	<PortfolioGrid />
+	<Section
+		id="about"
+		title="About"
+		description="<p>I'm a self-taught developer from Cape Town, South Africa. I really enjoy coding and the problem solving aspects of it. I'm always eager to learn and I devote time outside of work to ensure that I stay up to date with the latest frameworks and browser API's.</p>"
+		imageUrl="/images/misc/tristan-wills.webp"
+	/>
+</Layout>

@@ -1,0 +1,29 @@
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: max-content;
+
+    .socialLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        color: var(--light);
+        background: var(--primary);
+        border-radius: 50%;
+        padding: 0.5rem;
+        transition: var(--ease);
+
+        .icon {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+}

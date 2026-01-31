@@ -1,0 +1,70 @@
+.contactItems {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
+
+    @media (width >= 768px) and (width < 1200px) {
+        justify-content: center;
+    }
+
+    @media (width >=1200px) {
+        gap: 2rem;
+    }
+
+    .contactItem {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        .text {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            gap: 0.4rem;
+
+            .label {
+                @media all {
+                    font-size: 0.75rem;
+                }
+            }
+
+            .value {
+                @media all {
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    max-width: 15rem;
+                    line-height: 125%;
+                }
+            }
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--secondary);
+            color: var(--light);
+            border-radius: 50%;
+
+            svg {
+                width: 55%;
+                height: 55%;
+            }
+
+            @media (width >=768px) {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            @media (width >=1200px) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+}

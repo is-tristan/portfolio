@@ -1,0 +1,15 @@
+@use "../../init/mixins" as *;
+
+.btn {
+    @include btn();
+
+    &.transparent {
+        background: transparent;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: rgba(var(--lightRgb), 0.075);
+        }
+    }
+}

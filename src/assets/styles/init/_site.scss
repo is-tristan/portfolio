@@ -1,0 +1,116 @@
+$xColor: #25262c;
+
+body {
+    padding: 0.5rem 0;
+    background: var(--primary);
+    overflow: hidden;
+}
+
+.app {
+    background: var(--dark);
+    border-radius: 0.5rem;
+
+    @media (width >=768px) {
+        border-radius: 1rem;
+    }
+
+    @media (width >=1200px) {
+        border-radius: 2rem;
+    }
+}
+
+.hasBorders {
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $xColor;
+    }
+
+    &::after {
+        top: unset;
+        bottom: 0;
+    }
+
+    @media (width >=768px) {
+        gap: 3rem;
+    }
+}
+
+.x {
+    display: none;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+
+    @keyframes xAnimation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+        border-top: 0.35rem solid $xColor;
+        border-right: 0.35rem solid transparent;
+        border-left: 0.35rem solid transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        rotate: -90deg
+    }
+
+    &.xOne,
+    &.xTwo {
+        top: 0.33rem;
+    }
+
+    &.xThree,
+    &.xFour {
+        bottom: -0.75rem;
+    }
+
+    &.xOne,
+    &.xThree {
+        left: 1.5rem;
+
+        @media (width >=1200px) {
+            left: 3rem;
+        }
+
+        @media (width >=1512px) {
+            left: 5rem;
+        }
+    }
+
+    &.xTwo,
+    &.xFour {
+        right: 1.5rem;
+
+        @media (width >=1200px) {
+            right: 3rem;
+        }
+
+        @media (width >=1512px) {
+            right: 5rem;
+        }
+    }
+}

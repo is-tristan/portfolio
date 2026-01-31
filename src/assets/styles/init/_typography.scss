@@ -1,0 +1,83 @@
+/*
+* =============================================
+* Headings
+* ============================================= 
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading);
+    font-weight: 500;
+    line-height: 90%;
+    margin: 0;
+    padding: 0;
+    color: var(--light);
+}
+
+
+h1 {
+    font-size: clamp(2rem, 10vw, 10rem);
+    text-wrap: balance;
+}
+
+h2 {
+    font-size: clamp(2rem, 10vw, 10rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 1.25vw, 1.25rem);
+}
+
+h5 {
+    font-size: clamp(1.15rem, 1.15vw, 1.15rem);
+}
+
+h6 {
+    font-size: clamp(1rem, 1vw, 1rem);
+}
+
+/*
+* =============================================
+* Text, lists, inputs, links
+* ============================================= 
+*/
+
+p,
+ul,
+ol {
+    font-size: clamp(0.9rem, calc(0.9rem + (1 - 0.9) * ((100vw - 20rem) / (1200 - 20))), 1rem);
+    line-height: 170%;
+    font-weight: 500;
+    text-wrap: pretty;
+
+    @media (width >=768px) and (width <1200px) {
+        text-align: center;
+    }
+}
+
+small {
+    font-family: var(--text);
+    text-transform: none;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ul {
+    margin: 0;
+}

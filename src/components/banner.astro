@@ -1,0 +1,13 @@
+---
+const { title } = Astro.props
+import BackgroundAnimation from "./background-animation.astro"
+---
+
+<section class="row banner">
+	<div class="container centered">
+		<div class="heading">
+			<h1 set:html={title} />
+		</div>
+	</div>
+	<BackgroundAnimation />
+</section>
