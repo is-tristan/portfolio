@@ -1,0 +1,13 @@
+{
+    "name": "tristan-wills-portfolio",
+    "compatibility_date": "2026-02-01",
+    "assets": {
+        "directory": "./dist"
+    },
+    "routes": [
+        {
+            "pattern": "tristanwills.com",
+            "custom_domain": true
+        }
+    ]
+}
