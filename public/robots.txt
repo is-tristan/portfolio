@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tristanwills.com/sitemap-index.xml
