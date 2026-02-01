@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets"
-const { id, layoutType = "default", title, description, imageUrl } = Astro.props
+const { id, layoutType = "default", title, description, imageUrl, hasBorders = false } = Astro.props
 const layoutTypes = {
 	default: "dualCols rowReverse",
 	rightImage: "dualCols",
@@ -8,7 +8,7 @@ const layoutTypes = {
 } as const
 ---
 
-<section id={id ? id : null} class={`row section`}>
+<section id={id ? id : null} class={`row section ${hasBorders ? "hasBorders" : undefined}`}>
 	<div class={`container ${layoutTypes[layoutType as keyof typeof layoutTypes]}`}>
 		{
 			imageUrl && (

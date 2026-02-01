@@ -1,6 +1,12 @@
 ---
 import { AstroFont } from "astro-font"
 import Home from "../components/pages/home.astro"
+
+const title = "Tristan Wills - Fullstack Developer from Cape Town, South Africa"
+const description =
+	"Portfolio of Tristan Wills, a fullstack developer based in Cape Town, South Africa. Building web applications with modern technologies."
+const canonicalUrl = new URL(Astro.url.pathname, Astro.url.origin).href
+const ogImageUrl = new URL("/og-image.png", Astro.url.origin).href
 ---
 
 <html lang="en">
@@ -10,7 +16,22 @@ import Home from "../components/pages/home.astro"
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Tristan - Portfolio</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:alt" content="Tristan Wills - Fullstack Developer" />
+		<meta property="og:locale" content="en_ZA" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalUrl} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
+		<meta name="twitter:image:alt" content="Tristan Wills - Fullstack Developer" />
 		<AstroFont
 			config={[
 				{

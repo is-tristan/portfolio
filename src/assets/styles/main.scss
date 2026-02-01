@@ -10,11 +10,14 @@
 
 // Layout
 @use "layout/header" as *;
+@use "layout/mobile-menu" as *;
+@use "layout/footer" as *;
 
 // UI
 @use "ui/handlers/buttons" as *;
 
 // Components
 @use "components/banner" as *;
-@use "components/portfolio-grid" as *;
+@use "components/portfolio" as *;
 @use "components/section" as *;
+@use "components/work" as *;

@@ -1,0 +1,62 @@
+[
+    {
+        "company": "Levitate",
+        "title": "Fullstack Developer",
+        "startDate": "01 June 2020",
+        "endDate": "Present",
+        "description": [
+            "My day-to-day is varied: I work across websites and web applications, adapting to each client's needs. Levitate values versatility and the ability to switch context quickly. As part of a small team, I wear many hats and learn on the fly. That environment has pushed me to pick up a broad range of technologies and frameworks and to grow as a developer."
+        ],
+        "skills": [
+            "Next.js",
+            "TypeScript",
+            "PHP",
+            "SQL",
+            "HTML",
+            "SCSS",
+            "JavaScript",
+            "Supabase",
+            "Astro",
+            "Vite",
+            "WordPress",
+            "Shopify",
+            "Headless"
+        ],
+        "tools": [
+            "Cursor",
+            "Figma",
+            "Adobe XD",
+            "Git",
+            "GitHub",
+            "Digital Ocean",
+            "Vercel",
+            "Cloudflare",
+            "Google Cloud",
+            "Asana",
+            "Slack"
+        ],
+        "soft-skills": [
+            "Project Management",
+            "Team Collaboration",
+            "Communication",
+            "Problem Solving",
+            "Time Management",
+            "Adaptability",
+            "Attention to Detail"
+        ],
+        "key-responsibilities": [
+            "Introduced Vite into the company's WordPress workflow, replacing legacy build tools with faster compilation, better hot reloading, and a more modern development experience.",
+            "Architect and maintain a shared global CSS system that unifies layouts and keeps design consistent across all client sites.",
+            "Collaborate with leadership to define technical approaches, assess feasibility, and recommend stacks that fit client requirements.",
+            "Act as the primary developer for Next.js and WordPress, bridging modern frameworks with traditional CMS builds.",
+            "Mentor developers and provide day-to-day support, promoting scalable, maintainable, and performant codebases."
+        ],
+        "key-achievements": [
+            "Built a modular global stylesheet using CSS variables for design tokens (colors, radii, layout widths, etc.), enabling consistent design and reuse across client projects.",
+            "Cut front-end development time by 30-40% with a responsive, pre-optimized base framework that requires minimal custom work.",
+            "Improved delivery efficiency and client satisfaction through faster turnaround and consistently polished, adaptable layouts.",
+            "Modernized the internal WordPress build pipeline with Vite, significantly reducing build times and boosting developer productivity.",
+            "Maintain and update legacy WordPress sites so they stay secure, performant, and aligned with current best practices."
+        ]
+    }
+]

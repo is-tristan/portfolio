@@ -19,7 +19,7 @@
             "Supabase"
         ],
         "link": "https://found.tagged-pets.com/",
-        "repo": null
+        "repo": "https://github.com/is-tristan/tagged"
     },
     {
         "title": "Growth3",
@@ -28,8 +28,8 @@
             "Next.js",
             "Headless"
         ],
-        "link": "https://github.com/is-tristan/growth3",
-        "repo": null
+        "link": "https://www.growth3.co/ ",
+        "repo": "https://github.com/is-tristan/growth3"
     },
     {
         "title": "Syncvue UK",

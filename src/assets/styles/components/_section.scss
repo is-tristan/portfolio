@@ -1,0 +1,16 @@
+.section {
+
+    h2,
+    p {
+        @media (width >=576px) and (width < 1200px) {
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    p {
+        @media (width >=1200px) {
+            max-width: 35rem;
+        }
+    }
+}

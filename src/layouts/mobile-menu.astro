@@ -1,0 +1,70 @@
+---
+import menu from "../data/menu.json"
+---
+
+<div class="mobileMenu">
+	<nav class="mobileMenuNav">
+		<div class="mobileMenuCloseBtn"><span></span><span></span></div>
+		{
+			menu.map((item: { label: string; href: string }) => (
+				<a href={item.href} class="mobileMenuNavItem" data-section={item.label?.toLowerCase().replace(/ /g, "-").replace(".", "")}>
+					{item.label}
+				</a>
+			))
+		}
+	</nav>
+</div>
+
+<div class="mobileMenuOverlay"></div>
+
+<script>
+	const mobileMenu = () => {
+		const body = document.body
+		const mobileMenu = document.querySelector(".mobileMenu")
+		if (!mobileMenu) return
+		const mobileMenuBtn = document.querySelector(".mobileMenuBtn")
+		if (!mobileMenuBtn) return
+		const menuActive = "mobileMenuActive"
+
+		// Handle Open Button
+		mobileMenuBtn.addEventListener("click", () => {
+			if (!body.classList.contains("active")) {
+				body.classList.add(menuActive)
+			} else {
+				body.classList.remove(menuActive)
+			}
+		})
+
+		// Handle Close Button
+		const mobileMenuCloseBtn = document.querySelector(".mobileMenuCloseBtn")
+		if (!mobileMenuCloseBtn) return
+		mobileMenuCloseBtn.addEventListener("click", () => {
+			if (body.classList.contains(menuActive)) {
+				body.classList.remove(menuActive)
+			}
+		})
+
+		// Handle Backdrop Click
+		const mobileMenuOverlay = document.querySelector(".mobileMenuOverlay")
+		if (!mobileMenuOverlay) return
+		mobileMenuOverlay.addEventListener("click", () => {
+			if (body.classList.contains(menuActive)) {
+				body.classList.remove(menuActive)
+			}
+		})
+
+		// Close on a click
+		const mobileMenuNavItems = document.querySelectorAll(".mobileMenuNavItem")
+		if (!mobileMenuNavItems) return
+		mobileMenuNavItems.forEach((item: Element) => {
+			item.addEventListener("click", () => {
+				if (body.classList.contains(menuActive)) {
+					body.classList.remove(menuActive)
+				}
+			})
+		})
+	}
+
+	mobileMenu()
+	window.addEventListener("resize", mobileMenu)
+</script>

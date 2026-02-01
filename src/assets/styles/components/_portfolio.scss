@@ -5,47 +5,57 @@
     }
 }
 
-.categoriesNav {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-}
-
 .portfolioItems {
     display: flex;
     flex-flow: row wrap;
-    gap: 1.5rem;
-
-    >article {
-        flex: 0 0 100%;
-    }
-
-    @media (width >=768px) {
-        >article {
-            flex: 0 0 calc(50% - 1.5rem);
-        }
-    }
-
-    @media (width >=1200px) {
-        >article {
-            flex: 0 0 calc(33.33% - 1.5rem);
-        }
-    }
+    gap: 1.5rem 1rem;
 }
 
 .portfolioItem {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1.5rem;
     border: 1px solid rgba(var(--lightRgb), 0.075);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    flex: 1 0 100%;
     transition: var(--ease);
 
+    @media (width >=576px) {
+        padding: 1.5rem;
+        flex: 1 0 calc(50% - 1rem);
+    }
+
+    @media (width >=768px) {
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+
+    @media (width >=1024px) {
+        padding: 2rem;
+    }
+
+    @media (width < 1024px) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        .buttons {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+    @media (hover: hover) {
+        &:hover {
+            transform: translateY(-0.5rem);
+            background: rgba(var(--lightRgb), 0.025);
+        }
+
+    }
+
     .itemImage {
+        width: 100%;
         aspect-ratio: 16/9;
         border-radius: var(--borderRadius);
         overflow: hidden;
@@ -65,14 +75,32 @@
     .stack {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
         gap: 0.5rem;
 
+        @media (width >=1024px) {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
         .stackItem {
-            padding: 0.33rem 0.66rem;
+            padding: 0.33rem 0.5rem;
+            font-size: 0.75rem;
             background: rgba(var(--lightRgb), 0.025);
             border: 1px solid rgba(var(--lightRgb), 0.2);
             color: var(--textGrey);
             border-radius: var(--borderRadius);
+
+            @media (width >=1024px) {
+                padding: 0.33rem 0.66rem;
+                font-size: 0.875rem;
+            }
+
+            &[data-category="nextjs"] {
+                background: black;
+                color: var(--light);
+            }
 
             &[data-category="typescript"] {
                 background: rgba(var(--typescriptRgb), 0.1);

@@ -19,8 +19,7 @@
 // Container
 .container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     gap: 2rem;
     width: 100%;
@@ -31,14 +30,13 @@
     @media (width >=768px) {
         align-items: center;
         gap: 3rem;
-        padding: 4rem 3rem;
+        padding: 4rem 1.5rem;
         max-width: 90%;
     }
 
     @media (width >=1200px) {
         padding: 4rem 3rem;
         justify-content: center;
-        align-items: flex-start;
     }
 
     @media (width >=1512px) {
@@ -105,10 +103,10 @@
 
     // Dual Columns
     &.dualCols {
-        @media (width >=1200px) {
-            flex-direction: row;
+        @media (width >=1024x) {
+            flex-flow: row nowrap;
             justify-content: space-between;
-            align-items: stretch;
+            align-items: center;
             gap: 5rem;
 
             >div {
@@ -117,6 +115,8 @@
         }
 
         .col {
+            display: flex;
+            align-items: center;
             width: 100%;
             height: auto;
         }
@@ -127,7 +127,7 @@
             justify-content: center;
             gap: 1.5rem;
 
-            @media (width >=1200px) {
+            @media (width >=1024px) {
                 gap: 2rem;
             }
         }
@@ -135,7 +135,7 @@
         &.rowReverse {
             flex-direction: column;
 
-            @media (width >=1200px) {
+            @media (width >=1024px) {
                 flex-direction: row-reverse;
             }
         }
@@ -189,6 +189,7 @@
         }
     }
 }
+
 // Heading container
 .heading {
     display: flex;
@@ -244,8 +245,12 @@
     width: 100%;
     height: 100%;
 
-    @media (width >=768px) and (width <1200px) {
-        max-height: 25rem;
+    @media (width >=576px) {
+        aspect-ratio: 4/3;
+    }
+
+    @media (width >=1024px) {
+        aspect-ratio: 1/1;
     }
 
     img {

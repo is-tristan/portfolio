@@ -9,12 +9,6 @@
      z-index: 999;
      border-bottom: 1px solid transparent;
      transition: var(--ease);
-
-     &.active {
-         background: var(--dark);
-         top: 0;
-         border-color: rgba(var(--lightRgb), 0.1);
-     }
  }
 
  .headerContainer {
@@ -51,12 +45,12 @@
      }
  }
 
- .headerNav {
+ .desktopNav {
      display: none;
      align-items: center;
      gap: 3rem;
 
-     @media (width >=1200px) {
+     @media (width >=768px) {
          display: flex;
      }
 
@@ -69,41 +63,48 @@
          transition: var(--ease);
 
          &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            height: 1px;
-            background: var(--primary);
-            transition: var(--ease);
+             content: '';
+             position: absolute;
+             bottom: 0;
+             right: 0;
+             width: 0;
+             height: 1px;
+             background: var(--primary);
+             transition: var(--ease);
+         }
+
+         &:hover {
+             color: var(--light);
          }
 
          &.active {
-            color: var(--light);
-            &::before {
-                width: 100%;
-                left: 0;
-                right: unset;
-            }
+             color: var(--light);
+
+             &::before {
+                 width: 100%;
+                 left: 0;
+                 right: unset;
+             }
          }
      }
  }
 
- .mobileMenuBtn {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     gap: 0.4rem;
-     align-items: center;
-     width: 2rem;
-     height: 1.5rem;
-     cursor: pointer;
-     position: relative;
+ .header.active {
+     top: 0;
+     background: rgba(var(--darkRgb), 0.85);
+     border-color: rgba(var(--lightRgb), 0.1);
+     backdrop-filter: blur(0.5rem);
 
-     span {
-         width: 100%;
-         height: 1.5px;
-         background: var(--light);
+     @media (width >=1024px) {
+         background: rgba(var(--darkRgb), 0.85);
+         backdrop-filter: blur(1.5rem);
+     }
+
+     .headerContainer {
+         height: calc(var(--mobileHeaderHeight) / 1.25);
+
+         @media (width >=768px) {
+             height: calc(var(--headerHeight) / 1.5);
+         }
      }
  }

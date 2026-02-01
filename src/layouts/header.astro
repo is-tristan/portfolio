@@ -1,6 +1,6 @@
 ---
-// @ts-ignore
 import menu from "../data/menu.json"
+import MobileMenu from "./mobile-menu.astro"
 const logo =
 	'<svg width="40" height="40" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M12.4387 64L0 18.2857H9.46471L20.291 60.7857L16.9902 60.9286L32.2747 5H32.5379L47.1488 60.9286L43.848 60.7857L54.6743 18.2857H64L51.7003 64H40.9566L30.367 25.5H33.772L23.1824 64H12.4387Z" /> <path d="M0 0H64V9.66667H0V0Z" /> </svg>'
 const gitHubIcon =
@@ -13,7 +13,7 @@ const gitHubIcon =
 			<a href="/#" set:html={logo} aria-label="Go to home page" />
 		</div>
 		<div class="headerActions">
-			<nav class="headerNav desktopNav hidden-s hidden-m">
+			<nav class="headerNav desktopNav">
 				{
 					menu.map((item: { label: string; href: string }) => (
 						<a href={item.href} class="headerNavItem" data-section={item.label?.toLowerCase().replace(/ /g, "-").replace(".", "")}>
@@ -26,13 +26,15 @@ const gitHubIcon =
 				<div class="icon" set:html={gitHubIcon} />
 				<span>GitHub</span>
 			</a>
-			<div class="mobileMenuBtn hidden-l hidden-xl">
+			<div class="mobileMenuBtn">
 				<span></span>
 				<span></span>
 			</div>
 		</div>
 	</div>
 </header>
+
+<MobileMenu />
 
 <script>
 	const headerScroll = () => {
@@ -91,7 +93,6 @@ const gitHubIcon =
 
 		observedSections.forEach((section) => observer.observe(section))
 	}
-
 	headerScroll()
 	setupSectionObserver()
 </script>

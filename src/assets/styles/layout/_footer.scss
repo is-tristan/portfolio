@@ -1,0 +1,39 @@
+.footerContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    
+    @media (width >=576px) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    @media all {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.contactCol {
+    display: flex;
+    justify-content: flex-end;
+
+    .contactItem {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.33rem;
+        transition: var(--ease);
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}

@@ -1,0 +1,123 @@
+$menuTransition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+.mobileMenuBtn,
+.mobileMenuCloseBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    align-items: center;
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    position: relative;
+
+    @media (width >=768px) {
+        display: none;
+    }
+
+    span {
+        width: 100%;
+        height: 1.5px;
+        background: var(--light);
+    }
+}
+
+.mobileMenu {
+    display: flex;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 85%;
+    height: 100%;
+    background: rgba(var(--darkRgb), 0.85);
+    padding: 3rem;
+    border-left: 1px solid rgba(var(--lightRgb), 0.1);
+    transition: $menuTransition;
+
+    @media (width >=576px) {
+        width: 60%;
+    }
+
+    @media (width >=768px) {
+        display: none;
+    }
+}
+
+.mobileMenuCloseBtn {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    transform-origin: center;
+    border: 1px solid rgba(var(--lightRgb), 0.215);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+
+    span {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 1rem;
+        height: 1px;
+
+        &:first-child {
+            rotate: 45deg;
+        }
+
+        &:last-child {
+            rotate: -45deg;
+        }
+    }
+}
+
+.mobileMenuNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+
+    .mobileMenuNavItem {
+
+        &:focus,
+        &:active {
+            color: var(--light);
+        }
+    }
+}
+
+.mobileMenuOverlay {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    translate: 0 100%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--darkRgb), 0.75);
+    backdrop-filter: blur(0.5rem);
+    transition: $menuTransition;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobileMenuActive {
+    .mobileMenu {
+        right: 0;
+    }
+
+    .mobileMenuOverlay {
+        opacity: 1;
+        visibility: visible;
+        translate: 0 0;
+    }
+}
