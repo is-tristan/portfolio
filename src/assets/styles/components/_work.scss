@@ -90,6 +90,12 @@
     gap: 1rem;
 }
 
+.stackedWorkItemCols {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .workItemCol {
     display: flex;
     flex-direction: column;

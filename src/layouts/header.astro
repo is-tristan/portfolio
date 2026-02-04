@@ -15,8 +15,8 @@ const gitHubIcon =
 		<div class="headerActions">
 			<nav class="headerNav desktopNav">
 				{
-					menu.map((item: { label: string; href: string }) => (
-						<a href={item.href} class="headerNavItem" data-section={item.label?.toLowerCase().replace(/ /g, "-").replace(".", "")}>
+					menu.map((item: { label: string; href: string; download?: string }) => (
+						<a href={item.href} download={item.download ?? undefined} class="headerNavItem" data-section={item.label?.toLowerCase().replace(/ /g, "-").replace(".", "")}>
 							{item.label}
 						</a>
 					))

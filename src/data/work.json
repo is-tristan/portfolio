@@ -19,21 +19,21 @@
             "Astro",
             "Vite",
             "WordPress",
-            "Shopify",
-            "Headless"
+            "Shopify"
         ],
         "tools": [
             "Cursor",
             "Figma",
             "Adobe XD",
             "Git",
-            "GitHub",
+            "Asana",
+            "Slack"
+        ],
+        "infrastructure": [
             "Digital Ocean",
             "Vercel",
             "Cloudflare",
-            "Google Cloud",
-            "Asana",
-            "Slack"
+            "Google Cloud"
         ],
         "soft-skills": [
             "Project Management",

@@ -10,5 +10,10 @@
     {
         "label": "Work",
         "href": "/#work"
+    },
+    {
+        "label": "Download CV",
+        "href": "/files/tristan-wills-cv-print-2026.pdf",
+        "download": "tristan-wills-cv-print-2026.pdf"
     }
 ]
