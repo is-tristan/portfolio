@@ -1,11 +1,22 @@
 ---
 import { Image } from "astro:assets"
-const { id, layoutType = "default", title, description, imageUrl, hasBorders = false } = Astro.props
+const {
+	id,
+	layoutType = "default",
+	title,
+	description,
+	imageUrl,
+	hasBorders = false,
+	favorites = [{ label: "", value: "", icon: "", link: "" }],
+} = Astro.props
 const layoutTypes = {
 	default: "dualCols rowReverse",
 	rightImage: "dualCols",
 	centered: "centered",
 } as const
+
+const arrowRightIcon =
+	'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/> </svg>'
 ---
 
 <section id={id ? id : null} class={`row section ${hasBorders ? "hasBorders" : undefined}`}>
@@ -23,6 +34,27 @@ const layoutTypes = {
 			<div class="heading">
 				<h2>{title}</h2>
 				{description && <div class="description" set:html={description} />}
+				{
+					favorites && favorites.length > 0 && (
+						<div class="favorites">
+							{favorites.map((favorite: { label: string; value: string; icon: string; link: string }) => (
+								<div class="favorite">
+									<div class="favoriteHeading">
+										<div class="icon" set:html={favorite.icon} />
+										<h4>{favorite.label}</h4>
+									</div>
+									{favorite.link && (
+										<a class="favoriteLink" href={favorite.link} target="_blank">
+											<span>{favorite.value}</span>
+											<div class="icon" set:html={arrowRightIcon} />
+										</a>
+									)}
+									{!favorite.link && <span>{favorite.value}</span>}
+								</div>
+							))}
+						</div>
+					)
+				}
 			</div>
 		</div>
 	</div>
