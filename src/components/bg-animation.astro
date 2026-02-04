@@ -49,7 +49,7 @@
 			orbits.forEach((orbit, orbitIndex) => {
 				ctx.beginPath()
 				ctx.arc(centerX, centerY, orbit.radius, 0, Math.PI * 2)
-				ctx.strokeStyle = "rgba(98, 132, 254, 0.05)"
+				ctx.strokeStyle = "rgba(98, 132, 254, 0)"
 				ctx.lineWidth = Math.max(1, sizeScale)
 				ctx.stroke()
 				// Calculate smooth pulse animation
