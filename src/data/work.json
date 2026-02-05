@@ -1,25 +1,24 @@
 [
     {
         "company": "Levitate",
-        "title": "Fullstack Developer",
+        "title": "Full-Stack JavaScript Developer",
         "startDate": "01 June 2020",
         "endDate": "Present",
         "description": [
-            "My day-to-day is varied: I work across websites and web applications, adapting to each client's needs. Levitate values versatility and the ability to switch context quickly. As part of a small team, I wear many hats and learn on the fly. That environment has pushed me to pick up a broad range of technologies and frameworks and to grow as a developer."
+            "I work across modern websites and web applications, building full-stack solutions with a strong focus on front-end architecture and user experience. In a small, fast-moving team, I regularly switch between projects, define technical approaches, and deliver production-ready builds using modern JavaScript frameworks and tooling.",
+            "My role has evolved into helping drive the adoption of newer technologies and workflows, including modern build tooling, component-driven development, and performance-focused front-end practices. I enjoy working at the intersection of design and engineering, turning ideas into fast, scalable and maintainable products.",
+            "Working in a versatile environment has allowed me to develop a broad technical skillset while building a reputation as someone who can adapt quickly, learn fast, and deliver high-quality work across a range of projects."
         ],
         "skills": [
             "Next.js",
-            "TypeScript",
-            "PHP",
-            "SQL",
-            "HTML",
-            "SCSS",
-            "JavaScript",
-            "Supabase",
             "Astro",
+            "TypeScript",
+            "JavaScript",
+            "HTML",
+            "SCSS/Sass",
+            "PostgreSQL",
             "Vite",
-            "WordPress",
-            "Shopify"
+            "Headless (Shopify & WordPress)"
         ],
         "tools": [
             "Cursor",
@@ -36,27 +35,27 @@
             "Google Cloud"
         ],
         "soft-skills": [
-            "Project Management",
-            "Team Collaboration",
+            "Technical planning",
+            "Project ownership",
+            "Mentoring",
             "Communication",
-            "Problem Solving",
-            "Time Management",
+            "Problem solving",
             "Adaptability",
-            "Attention to Detail"
+            "Attention to detail"
         ],
         "key-responsibilities": [
-            "Introduced Vite into the company's WordPress workflow, replacing legacy build tools with faster compilation, better hot reloading, and a more modern development experience.",
-            "Architect and maintain a shared global CSS system that unifies layouts and keeps design consistent across all client sites.",
-            "Collaborate with leadership to define technical approaches, assess feasibility, and recommend stacks that fit client requirements.",
-            "Act as the primary developer for Next.js and WordPress, bridging modern frameworks with traditional CMS builds.",
-            "Mentor developers and provide day-to-day support, promoting scalable, maintainable, and performant codebases."
+            "Led the adoption of modern JavaScript tooling across the company's workflow, introducing Vite and GitHub-based collaboration to replace legacy build processes and significantly improve developer experience.",
+            "Design and build front-end architectures using Next.js, Astro and modern CSS/Sass systems, focusing on performance, scalability and maintainability.",
+            "Define technical approaches and recommend stacks based on project needs, often combining headless or hybrid CMS solutions with modern frameworks.",
+            "Act as a bridge between modern frontend frameworks and CMS platforms, enabling teams to deliver fast, flexible and future-proof websites.",
+            "Support and mentor developers, encouraging clean architecture, component-driven development and performance-focused best practices."
         ],
         "key-achievements": [
-            "Built a modular global stylesheet using CSS variables for design tokens (colors, radii, layout widths, etc.), enabling consistent design and reuse across client projects.",
-            "Cut front-end development time by 30-40% with a responsive, pre-optimized base framework that requires minimal custom work.",
-            "Improved delivery efficiency and client satisfaction through faster turnaround and consistently polished, adaptable layouts.",
-            "Modernized the internal WordPress build pipeline with Vite, significantly reducing build times and boosting developer productivity.",
-            "Maintain and update legacy WordPress sites so they stay secure, performant, and aligned with current best practices."
+            "Developed a reusable front-end foundation using design tokens and CSS variables, enabling consistent UI patterns and rapid project setup across multiple builds.",
+            "Reduced front-end development time by 30-40% through a pre-optimised, responsive base architecture and reusable component patterns.",
+            "Successfully modernised the company's front-end workflow by migrating to Vite, dramatically reducing build times and improving iteration speed.",
+            "Delivered high-performance websites using modern rendering approaches and component-driven development.",
+            "Continued to maintain and modernise existing WordPress projects while progressively introducing more modern, headless and framework-driven approaches."
         ]
     }
 ]

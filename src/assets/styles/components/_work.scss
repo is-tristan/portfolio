@@ -33,6 +33,8 @@
 
     @media (width >=768px) {
         align-items: flex-end;
+        text-align: right;
+        text-wrap: balance;
     }
 
     h3 {
@@ -104,14 +106,18 @@
     background: rgba(var(--lightRgb), 0.05);
     border-radius: var(--borderRadius);
     flex-basis: 100%;
-    
+
     @media (width >=576px) {
         flex-basis: calc(50% - 0.5rem);
     }
 
-    @media (width >=1024px) { 
+    @media (width >=1024px) {
         flex: 1 0 calc(33.33% - 1rem);
         padding: 2rem;
+
+        &.halfWidth {
+            flex: 0 0 calc(50% - 0.5rem);
+        }
     }
 
     @media (width >=1200px) {
